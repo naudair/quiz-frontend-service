@@ -85,7 +85,7 @@ export default function CreateFactModal({ userData, setData }) {
                         onChange={handleChangeFact} />
                     <div style={{ color: "rgb(255, 0, 0)", height: "5px" }} >{factError}</div>
                     <div style={{ color: "rgb(255, 0, 0)", height: "5px" }} >{required}</div>
-                    <button onClick={handleCreateFact}>
+                    <button className='createButton'  onClick={handleCreateFact}>
                         CREATE
                     </button>
                 </Box>

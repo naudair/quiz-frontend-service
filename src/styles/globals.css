@@ -4,7 +4,8 @@ body {
   padding: 0;
 }
 
-input, textarea{
+input,
+textarea {
   background-color: rgb(119, 136, 176);
   font-size: 25px;
   height: 50px;
@@ -39,9 +40,11 @@ button {
   color: rgba(22, 22, 100, 0.9);
   font-family: 'Gill Sans';
 }
+
 button:hover {
   border: 2px solid rgb(119, 136, 176);
 }
+
 button:active {
   border: none;
   box-shadow: 0 0 10px rgb(119, 136, 176);
@@ -56,11 +59,12 @@ button:active {
   text-shadow: 0 0 5px rgb(82, 34, 34);
 }
 
-.text{
+.text {
   color: white;
   /* padding-top: 20px; */
 }
-.text:hover{
+
+.text:hover {
   text-decoration: underline;
 }
 
@@ -89,7 +93,8 @@ button:active {
   background-color: white;
   color: rgb(22, 22, 100);
 }
-#modalbutton{
+
+#modalbutton {
   height: 45px;
 }
 
@@ -97,6 +102,7 @@ button:active {
   background-color: rgb(225, 225, 237);
   border: 2.5px solid rgb(22, 22, 100);
 }
+
 .navbutton:active {
   box-shadow: 0 0 10px rgb(119, 136, 176);
 }
@@ -162,7 +168,8 @@ button:active {
   gap: 8px;
   font-size: 15px;
 }
-.profilepage{
+
+.profilepage {
   width: 100%;
   height: 100vh;
   background-color: rgb(255, 255, 255);
@@ -170,14 +177,14 @@ button:active {
   color: rgb(22, 22, 100);
 }
 
-.userPage{
+.userPage {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
 
-.modalcontainer{
+.modalcontainer {
   background-color: #ffffff;
   width: 80vw;
   height: 80vh;
@@ -187,17 +194,18 @@ button:active {
   align-items: center;
   justify-content: start;
   box-sizing: border-box;
-  padding: 100px 100px 80px 100px ;
+  padding: 100px 100px 80px 100px;
   gap: 25px;
   border-radius: 20px;
 }
 
-.titleinput{
+.titleinput {
   width: 70vw;
   height: 40px;
   font-size: 35px;
 }
-.textinput{
+
+.textinput {
   width: 70vw;
   height: 100vh;
   display: flex;
@@ -205,7 +213,7 @@ button:active {
   justify-content: start;
 }
 
-.editdelete{
+.editdelete {
   /* display: flex; */
   width: 100px;
   height: 35px;
@@ -217,7 +225,24 @@ button:active {
   border: none;
   border-radius: 12px;
 }
-.editdelete:hover{
+
+.editdelete:hover {
   background-color: #ffffffd7;
   border: #ffffff;
+}
+
+.createButton {
+  background-color: rgb(22, 22, 100);
+  color: #ffffff;
+  border: none;
+  height: 90px;
+}
+.createButton:active {
+  background-color: #ffffff;
+  color: rgb(22, 22, 100);
+  height: 90px;
+}
+.createButton:hover{
+  box-shadow: 0 0 10px rgb(119, 136, 176);
+  border: none;
 }
