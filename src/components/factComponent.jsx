@@ -1,13 +1,28 @@
-export const FactComponent = ({ factData, userData }) => {
+import axios from "axios"
+import { useEffect, useState } from "react";
+
+export const FactComponent = ({ factData }) => {
     const date = new Date(factData.date);
     const formattedDate = date.toLocaleString();
-    console.log(userData)
+
+    const [userName, setUserName] = useState('')
+
+
+
+    useEffect(() => {
+        const getUserName = async (userId) => {
+            const response = await axios.get(`https://quiz-app-backend-service-3a47.onrender.com/users/${userId}`);
+            setUserName(response.data.userName)
+        }
+        getUserName(factData.userID)
+    }, [factData])
+
 
     return (
         <>
             <div style={{ display: "flex", justifyContent: "space-between", }}>
                 <div className="factUserName">
-                   {factData.userName}
+                    {userName}
                 </div>
                 <div className="factDate">
                     {formattedDate}

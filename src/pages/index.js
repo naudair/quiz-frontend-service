@@ -25,7 +25,6 @@ export default function Home() {
     }
     const userData = async () => {
       const userId = localStorage.getItem('userId')
-      console.log(userId)
       const response = await axios.get(`https://quiz-app-backend-service-3a47.onrender.com/users/${userId}`);
       setUserData(response.data)
     }
@@ -42,6 +41,7 @@ export default function Home() {
     const userId = localStorage.getItem("userId")
     const res = await axios.post(`https://quiz-app-backend-service-3a47.onrender.com/facts/likes/${factId}/${userId}`)
     const updatedFact = data.map((fact) => {
+      console.log('hello', res.data)
       if (fact._id === factId) {
         return { ...res.data }
       } else {
@@ -89,7 +89,7 @@ export default function Home() {
                 justifyContent: "center"
               }}>
                 <div className="fact">
-                  <FactComponent factData={factData} userData={userData} key={key} />
+                  <FactComponent factData={factData} key={key} />
                 </div>
                 <div className="likesDislikes">
                   <div className="likes" onClick={() => clickedLike(factData._id)}>
